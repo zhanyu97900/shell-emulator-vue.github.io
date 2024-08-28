@@ -1,0 +1,33 @@
+name: 打包本项目
+
+on:
+  push:
+    branches:
+      - master # 触发条件：每当master分支有更新时
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16 # 使用Node.js v16版本
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Vue 3 app
+        run: npm run build # 假设您的build命令是npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # 您的构建输出目录
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          publish_branch: gh-pages # 将构建结果发布到gh-pages分支
