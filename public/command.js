@@ -15,7 +15,7 @@ import shutdown from "./cmd/shutdown.js";
 import uname, { unameHint } from "./cmd/uname.js";
 import uptime from "./cmd/uptime.js";
 import version from "./cmd/version.js";
-
+import feh, { fehHint } from "./cmd/feh.js";
 // 3. 最后将你的命令函数和可选的提示函数注册到列表中。
 window.externalCommand = [
   { name: "cat", func: cat, hint: catHint },
@@ -31,5 +31,6 @@ window.externalCommand = [
   { name: "shutdown", func: shutdown },
   { name: "uname", func: uname, hint: unameHint },
   { name: "uptime", func: uptime },
-  { name: "version", func: version }
+  { name: "version", func: version },
+{ name: "feh", func: feh, hint: fehHint },
 ]

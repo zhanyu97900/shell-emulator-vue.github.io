@@ -1,4 +1,4 @@
-import { cpuinfo, meminfo, nothing, readme, uptime } from './fsFile.js';
+import { cpuinfo, meminfo, nothing, readme, uptime , pagepng } from './fsFile.js';
 
 window.fsTree = {
   "boot": {
@@ -114,9 +114,12 @@ window.fsTree = {
   },
   "etc": {},
   "home": {
-    "defaultuser": {
+    "zhanlan": {
       "readme.txt": readme
-    }
+    },
+     "user":{
+	"page.png":pagepng
+	}
   },
   "media": {},
   "mnt": {},

@@ -1,11 +1,10 @@
 export function readme() {
   return [
-    "#############################",
-    "# Welcome to shell-emulator #",
-    "#############################",
+    "你好，这是我的主页",
+    "感谢你的点击",
+    "本网站作者是：123",
     "",
-    "It's a simple shell emulator made with Vue.js.",
-    "Author: <a href=\"https://github.com/ChrisKimZHT\" target=\"_blank\">ChrisKimZHT</a> | GitHub: <a href=\"https://github.com/ChrisKimZHT/shell-emulator\" target=\"_blank\">shell-emulator</a>",
+    "基于github项目：<a href=\"https://github.com/ChrisKimZHT\" target=\"_blank\">shell-emulator</a> 部署",
     "",
   ].join("\n");
 }
@@ -112,4 +111,7 @@ export function uptime() {
 
 export function nothing() {
   return "The quick brown fox jumps over the lazy dog.";
+}
+export function pagepng(){
+	return 'https://images.pexels.com/photos/27911407/pexels-photo-27911407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 }
